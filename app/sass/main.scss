@@ -1,24 +1,18 @@
-// @import 'utils/variables';
-// @import "utils/mixins";
+@import 'utils/variables';
+@import 'utils/fonts';
+@import "utils/mixins";
 
-/* ==========================================================================
-   Base styles
-   ========================================================================== */
-// @import 'base/base';
-// @import 'base/clearfix';
+/*-------------- base style -----------------*/
+
+@import 'base/base';
+@import 'base/clearfix';
 
 
-/* ==========================================================================
-   Layout styles
-   ========================================================================== */
-// @import 'layout/grid';
-// @import 'layout/header';
+@import 'layout/header';
 // @import 'layout/content';
 // @import 'layout/footer';
 
-/* ==========================================================================
-   Components styles
-   ========================================================================== */
+/*-------------- Components styles -----------------*/
 // @import 'components/auth';
 // @import 'components/btn-basket';
 // @import 'components/btn-print';

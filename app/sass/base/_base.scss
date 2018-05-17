@@ -1,0 +1,131 @@
+﻿*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+	vertical-align: middle;
+}
+
+textarea {
+	resize: vertical;
+}
+
+// .box{
+// 	height: 800px;
+// 	background: red;
+// }
+
+html,
+body{
+	background: #fff;
+	font-family: $font-site;
+	@include font(normal, 400, 15px, 1.4, $color-text);
+}
+
+a{
+	color: $color-yellow;
+}
+
+a:hover,
+a:active,
+a:focus{
+	text-decoration: none;
+}
+
+p{
+	@include font(normal, 400, 15px, 24px, $color-text);
+	padding: 5px 0;
+}
+
+h1,
+.tipa-h1{
+	@include font(normal, 700, 42px, 45px, $color-text);
+}
+
+h2,
+.tipa-h2{
+	@include font(normal, 500, 32px, 48px, $color-text);
+}
+
+h3,
+.tipa-h3{
+	@include font(normal, 400, 32px, 45px, $color-text);
+}
+
+h4,
+.tipa-h4{
+	@include font(normal, 400, 28px, 36px, $color-text);
+}
+
+h5,
+.tipa-h5{
+	@include font(normal, 400, 24px, 30px, $color-text);
+}
+
+h6,
+.tipa-h6{
+	@include font(normal, 400, 18px, 24px, $color-text);
+}
+
+.wrapper{
+	width: 100%;
+	max-width: 1903px;
+	margin: 0 auto;
+}
+
+.page-wrap{
+	width: 1703px;
+	margin: 0 auto;
+}
+
+.logo{
+	font-family: $font-site;
+	@include font(normal, 400, 18px, 1, #fff);
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+	white-space: nowrap;
+}
+
+.btn{
+	display: inline-block;
+	height: 50px;
+	border-radius: 25px;
+	background: $color-yellow;
+	@include font(normal, 400, 15px, 48px, #fff);
+	text-transform: uppercase;
+	padding: 0 38px;
+	text-align: center;
+
+	&:hover{
+		background: #eacb60;
+	}
+}
+
+.code{
+	background-color: #f7f7f7;
+	border: 1px solid #e1e1e8;
+	color: #d14;
+	padding: 1px 4px;
+	display: inline-block;
+	font-family: monospace, arial;
+	border-radius: 3px;
+}
+
+.h-text-left{text-align: left !important;}
+.h-text-center{text-align: center !important;}
+.h-text-right{text-align: right !important;}
+.h-text-justify{text-align: justify !important;}
+.h-text-uppercase{text-transform: uppercase !important;}
+.h-text-bold {font-weight: 700 !important;}
+
+.swiper-container {
+	width: 600px;
+	height: 300px;
+}

@@ -47,9 +47,9 @@ html {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1700px) {
   .container {
-    max-width: 1140px;
+    max-width: 1483px;
   }
 }
 
@@ -933,7 +933,7 @@ html {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1700px) {
   .col-xl {
     -ms-flex-preferred-size: 0;
     flex-basis: 0;
@@ -1276,7 +1276,7 @@ html {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1700px) {
   .d-xl-none {
     display: none !important;
   }
@@ -1914,7 +1914,7 @@ html {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1700px) {
   .flex-xl-row {
     -webkit-box-orient: horizontal !important;
     -webkit-box-direction: normal !important;
