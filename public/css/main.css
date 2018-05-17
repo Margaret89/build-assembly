@@ -330,10 +330,60 @@ h6,
   color: #ffdd69;
 }
 
+@keyframes head-slide {
+  0% {
+    left: -100%;
+  }
+  50% {
+    left: 250px;
+  }
+  100% {
+    left: 250px;
+  }
+}
+
+@-webkit-keyframes head-slide {
+  0% {
+    left: -100%;
+  }
+  50% {
+    left: 250px;
+  }
+  100% {
+    left: 250px;
+  }
+}
+
+@keyframes text-slide {
+  0% {
+    left: 100%;
+  }
+  50% {
+    left: 100%;
+  }
+  100% {
+    left: 250px;
+  }
+}
+
+@-webkit-keyframes text-slide {
+  0% {
+    left: 100%;
+  }
+  50% {
+    left: 100%;
+  }
+  100% {
+    left: 250px;
+  }
+}
+
 .top-slider-wrap {
   position: relative;
   padding: 30px 95px;
   margin-top: 138px;
+  height: 375px;
+  overflow: hidden;
 }
 
 .top-slider-counter {
@@ -349,10 +399,12 @@ h6,
 
 .top-slider {
   position: relative;
+  height: 100%;
 }
 
 .top-slider__item {
   padding-left: 250px;
+  height: 315px;
 }
 
 .top-slider__head {
@@ -361,6 +413,21 @@ h6,
   font-size: 77px;
   line-height: 96px;
   color: #fff;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: -100%;
+}
+
+.owl-item.no-anim-text .top-slider__head {
+  left: 250px;
+}
+
+.owl-item.anim-text .top-slider__head {
+  -webkit-animation: head-slide 1.5s 1 ease;
+  animation: head-slide 1.5s 1 ease;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 
 .top-slider__head-top {
@@ -379,6 +446,21 @@ h6,
   color: #fff;
   padding-left: 3px;
   margin-top: 22px;
+  display: none;
+  position: absolute;
+  top: 200px;
+  left: 100%;
+}
+
+.owl-item.no-anim-text .top-slider__text {
+  left: 250px;
+}
+
+.owl-item.anim-text .top-slider__text {
+  -webkit-animation: text-slide 1.5s 1 ease;
+  animation: text-slide 1.5s 1 ease;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 
 .top-slider::before {
@@ -554,6 +636,11 @@ h6,
 .top-slider.owl-theme .owl-nav [class*="owl-"][data-state="disabled"] {
   opacity: 0.3;
   cursor: default;
+}
+
+.owl-carousel .owl-item.active .top-slider__head,
+.owl-carousel .owl-item.active .top-slider__text {
+  display: block;
 }
 
 /*-------------- Components styles -----------------*/
