@@ -1,0 +1,38 @@
+﻿/*----------- About company -------------*/
+.about-company {
+	margin-top: 80px;
+	display: table;
+	width: 100%;
+
+	&__item{
+		display: table-cell;
+		vertical-align: middle;
+	}
+
+	&__item--slider{
+		width: 843px;
+	}
+
+	&__item--text{
+		padding: 0 76px;
+	}
+
+	&__text{
+		max-width: 735px;
+		padding-left: 35px;
+	}
+
+	&__text .stroke-left{
+		margin-left: -35px;
+	}
+
+	&__text  .tipa-h1 + p{
+		margin-top: 17px;
+	}
+
+	&__text p{
+		line-height: 30px;
+		letter-spacing: -0.2px;
+		margin-bottom: 7px;
+	}
+}

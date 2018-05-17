@@ -1,0 +1,11 @@
+﻿/*----------- news company -------------*/
+.slider-news{
+	&__date{
+		@include font(normal, 400, 15px, 24px, rgba(51,50,64,0.54));
+	}
+
+	&__head{
+		@include font(normal, 500, 30px, 40px, $color-text);
+	}
+	
+}

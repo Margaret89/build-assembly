@@ -2,6 +2,7 @@
 .main-top{
 	background: url(#{$path-img}/bg-main-top.jpg) no-repeat 0 0;
 	padding-top: 20px;
+	padding-bottom: 42px;
 }
 
 /* header */
@@ -81,7 +82,7 @@
 	position: relative;
 	padding: 30px 95px;
 	margin-top: 138px;
-	height: 375px;
+	height: 440px;
 	overflow: hidden;
 }
 
@@ -98,7 +99,7 @@
 
 	&__item{
 		padding-left: 250px;
-		height: 315px;
+		height: 380px;
 	}
 
 	&__head{
@@ -107,7 +108,8 @@
 		position: absolute;
 		top: 0;
 		// left: 250px;
-		left: -100%
+		left: -100%;
+		letter-spacing: -0.15px;
 	}
 
 	.owl-item.no-anim-text &__head{
@@ -136,6 +138,7 @@
 		top: 200px;
 		// left: 250px;
 		left: 100%;
+		letter-spacing: -0.15px;
 	}
 
 	.owl-item.no-anim-text &__text{
@@ -273,4 +276,72 @@
 .owl-carousel .owl-item.active .top-slider__head,
 .owl-carousel .owl-item.active .top-slider__text{
 	display: block;
+}
+
+/* top-info */
+.top-info{
+	display: table;
+	width: 100%;
+	padding: 38px 0;
+
+	&__copyright,
+	&__nav,
+	&__social{
+		display: table-cell;
+		vertical-align: middle;
+	}
+
+	&__nav,
+	&__copyright{
+		@include font(normal, 400, 13px, 30px, rgba(255,255,255,0.68));
+		letter-spacing: -0.2px;
+	}
+
+	&__copyright {
+		width: 345px;
+	}
+
+	&__nav span{
+		vertical-align: middle;
+	}
+}
+
+.top-info__nav .btn-scroll{
+	margin-right: 13px;
+}
+
+/* social-list */
+.social-list{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	float: right;
+
+	&__item{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		float: left;
+		padding: 0 8px;
+		position: relative;
+	}
+
+	&__item:not(:last-child)::after{
+		content: '·';
+		position: absolute;
+		right: 0;
+		@include top-center;
+	}
+
+	&__item:last-child{
+		padding-right: 0;
+	}
+
+	&__item:not(:last-child)::after,
+	&__link{
+		@include font(normal, 500, 13px, 30px, #fff);
+		text-decoration: none;
+		text-transform: uppercase;
+		letter-spacing: -0.1px;
+	}
 }
