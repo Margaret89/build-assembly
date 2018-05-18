@@ -1,0 +1,130 @@
+/*-------------- Footer -----------------*/
+.footer-wrap{
+	background: #452560;
+	border-bottom: 4px solid $color-yellow;
+	padding: 67px 0;
+}
+
+.footer-head{
+	@include font(normal, 500, 18px, 30px, #fff);
+	letter-spacing: -0.5px;
+	margin-top: -5px;
+}
+
+.footer{
+	@include font(normal, 400, 14px, 24px, rgba(255,255,255,0.54));
+	display: table;
+	width: 100%;
+
+	&__item{
+		display: table-cell;
+		vertical-align: top;
+		padding: 0 15px;
+	}
+
+	&__item:first-child{
+		padding-left: 0;
+	}
+
+	&__item:last-child{
+		padding-right: 0;
+	}
+
+	p{
+		letter-spacing: -0.2px;
+		@include font(normal, 400, 14px, 18px, rgba(255,255,255,0.54));
+	}
+
+	.logo{
+		margin-bottom: 10px;
+		display: inline-block;
+	}
+
+	&__item--logo{
+		width: 420px;
+	}
+
+	&__item--menu{
+		width: 442px;
+	}
+
+	&__item--contact{
+		width: 345px;
+	}
+}
+
+.footer-menu{
+	&__item,
+	&__list{
+		padding: 0;
+		margin: 0;
+		list-style: none;
+	}
+
+	&__list{
+		column-count: 2;
+		column-gap: 20px;
+		margin-top: 2px;
+		width: 340px;
+	}
+
+	&__link,
+	&__item{
+		@include font(normal, 400, 14px, 30px, rgba(255,255,255,0.54));
+		letter-spacing: -0.15px;
+		text-decoration: none;
+	}
+
+	&__link:hover{
+		color: $color-yellow;
+	}
+
+	&__item span{
+		padding: 10px 0;
+	}
+
+}
+
+.form-subscribe{
+	margin-top: 3px;
+	max-width: 395px;
+
+	&__title{
+		@include font(normal, 400, 11px, 18px, rgba(255,255,255,0.68));
+		text-transform: uppercase;
+		letter-spacing: -0.15px;
+		margin-top: 14px;
+	}
+
+	input[type="text"]{
+		border: 0;
+		outline: 0;
+		@include font(normal, 400, 14px, 18px, #fff);
+	}
+}
+
+.footer-contact{
+	margin-top: 10px;
+
+	&__adress{
+		@include font(normal, 400, 15px, 26px, #fff);
+		letter-spacing: -0.15px;
+	}
+
+	&__phone,
+	&__phone a{
+		@include font(normal, 700, 21px, 30px, #fff);
+		letter-spacing: -0.5px;
+		text-decoration: none;
+		margin-top: 5px;
+	}
+
+	&__phone a:hover{
+		color: $color-yellow;
+	}
+
+	&__mail{
+		@include font(normal, 400, 15px, 24px, $color-yellow);
+		letter-spacing: -0.15px;
+	}
+}

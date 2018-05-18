@@ -51,7 +51,7 @@ p{
 h1,
 .tipa-h1{
 	@include font(normal, 700, 42px, 46px, $color-text);
-	letter-spacing: -0.5px;
+	letter-spacing: -0.15px;
 }
 
 h2,
@@ -111,6 +111,16 @@ h6,
 	&:hover{
 		background: #eacb60;
 	}
+}
+
+input[type="submit"].btn{
+	display: inline-block;
+	height: 44px;
+	border-radius: 22px;
+	background: $color-yellow;
+	@include font(normal, 500, 15px, 42px, #fff);
+	padding: 0 18px;
+	text-align: center;
 }
 
 .code{

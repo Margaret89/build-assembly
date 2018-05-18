@@ -53,6 +53,7 @@ $(document).ready(function () {
 			thumbs: false,
 			nav: true,
 			dots: false,
+			margin: 30,
 		});
 	}
 });
