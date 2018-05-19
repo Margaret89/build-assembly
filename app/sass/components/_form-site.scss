@@ -1,0 +1,69 @@
+﻿/*----------- Form site -------------*/
+.form-wrap{
+	padding: 125px 0 138px;
+	margin-top: 140px;
+}
+
+.form-site{
+	width: 100%;
+	max-width: 732px;
+	margin: 0 auto;
+	
+	&__head{
+		@include font(normal, 500, 30px, 48px, $color-text);
+		letter-spacing: -0.5px;
+		margin-bottom: 30px;
+	}
+
+	&__item{
+		float: left;
+		width: 50%;
+		margin-bottom: 23px;
+	}
+
+	&__item:nth-child(odd){
+		padding-right: 15px;
+	}
+
+	&__item:nth-child(even){
+		padding-left: 15px;
+	}
+
+	&__item--full:nth-child(odd),
+	&__item--full:nth-child(even){
+		width: 100%;
+		padding: 0;
+	}
+
+	&__label{
+		@include font(normal, 400, 15px, 24px, $color-text);
+		letter-spacing: -0.15px;
+		display: block;
+		margin-bottom: 10px;
+	}
+
+	input[type="text"],
+	textarea{
+		border: none;
+		outline: none;
+		border-radius: 0;
+		background: #fff;
+		@include font(normal, 400, 16px, 24px, $color-text);
+		width: 100%;
+		padding: 0 15px;
+		letter-spacing: 0.15px;
+	}
+
+	input[type="text"]{
+		height: 49px;
+	}
+
+	textarea{
+		min-height: 100px;
+		padding: 13px 15px;
+	}
+
+	.btn{
+		margin-top: 5px;
+	}
+}

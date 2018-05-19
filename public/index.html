@@ -26,7 +26,7 @@
 									<ul class="top-menu">
 										<li class="top-menu__item"><a href="#" class="top-menu__link">О компании</a></li>
 										<li class="top-menu__item"><a href="#" class="top-menu__link">Сотрудничество</a></li>
-										<li class="top-menu__item"><a href="#" class="top-menu__link">Продукция</a></li>
+										<li class="top-menu__item"><a href="#" class="top-menu__link current">Продукция</a></li>
 										<li class="top-menu__item"><a href="#" class="top-menu__link">Наши партнеры</a></li>
 										<li class="top-menu__item"><a href="#" class="top-menu__link">Новости</a></li>
 										<li class="top-menu__item"><a href="#" class="top-menu__link">Представительства</a></li>
@@ -34,7 +34,7 @@
 								</nav>
 							</div>
 					
-							<div class="header__btn"><span class="btn">Контакты</span></div>
+							<div class="header__btn"><a href="#" class="btn">Контакты</a></div>
 						</div>
 					</header>
 
@@ -91,7 +91,7 @@
 
 					<div class="top-info">
 						<div class="top-info__copyright">© 1998 – 2018</div>
-						<div class="top-info__nav"><span class="btn-scroll"></span><span>Прокрутите или перетащите для навигации</span></div>
+						<div class="top-info__nav"><a href="#link-poduct" class="btn-scroll js-link-move"></a><span>Прокрутите или перетащите для навигации</span></div>
 
 						<div class="top-info__social clearfix">
 							<ul class="social-list clearfix">
@@ -111,57 +111,58 @@
 					<div class="container">
 						<div class="row">
 							<div class="col-12">
+								<div id="link-poduct"></div>
 								<div class="product-head">
 									<div class="product-head__item"><span class="tipa-h1 stroke-left">Продукция компании<br>&ldquo;СтройМонтаж&rdquo;</span></div>
-									<div class="product-head__item product-head__item--right"><span class="link-site">Перейти в раздел &ldquo;Продукция&rdquo;</span></div>
+									<div class="product-head__item product-head__item--right"><a href="/product.html" class="link-site">Перейти в раздел &ldquo;Продукция&rdquo;</span></div>
 								</div>
 							</div>
 						</div>
 					</div>
 
-					<div class="product-list">
+					<div class="product-list-main js-product-list">
 						<div class="container">
 							<div class="row">
 								<div class="col-3">
-									<div class="product-list__item" style="background-image: url(img/product1.jpg);">
-										<div class="product-list__content">
-											<div class="product-list__name">Окна</div>
-											<div class="product-list__text">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться.</div>
-											<div class="product-list__link"><a href="#">Перейти</a></div>
-											<div class="product-list__share"><a href="#" class="btn-share"></a></div>
+									<div class="product-list-main__item js-product-item" style="background-image: url(img/product1.jpg);">
+										<div class="product-list-main__content">
+											<div class="product-list-main__name">Окна</div>
+											<div class="product-list-main__text">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться.</div>
+											<div class="product-list-main__link"><a href="#">Перейти</a></div>
+											<div class="product-list-main__share"><a href="#" class="btn-share"></a></div>
 										</div>
 									</div>
 								</div>
 
 								<div class="col-3">
-									<div class="product-list__item" style="background-image: url(img/product2.jpg);">
-										<div class="product-list__content">
-											<div class="product-list__name">Балконы</div>
-											<div class="product-list__text">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться.</div>
-											<div class="product-list__link"><a href="#">Перейти</a></div>
-											<div class="product-list__share"><a href="#" class="btn-share"></a></div>
+									<div class="product-list-main__item js-product-item" style="background-image: url(img/product2.jpg);">
+										<div class="product-list-main__content">
+											<div class="product-list-main__name">Балконы</div>
+											<div class="product-list-main__text">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться.</div>
+											<div class="product-list-main__link"><a href="#">Перейти</a></div>
+											<div class="product-list-main__share"><a href="#" class="btn-share"></a></div>
 										</div>
 									</div>
 								</div>
 
 								<div class="col-3">
-									<div class="product-list__item" style="background-image: url(img/product3.jpg);">
-										<div class="product-list__content">
-											<div class="product-list__name">Натяжные потолки</div>
-											<div class="product-list__text">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться.</div>
-											<div class="product-list__link"><a href="#">Перейти</a></div>
-											<div class="product-list__share"><a href="#" class="btn-share"></a></div>
+									<div class="product-list-main__item js-product-item" style="background-image: url(img/product3.jpg);">
+										<div class="product-list-main__content">
+											<div class="product-list-main__name">Натяжные потолки</div>
+											<div class="product-list-main__text">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться.</div>
+											<div class="product-list-main__link"><a href="#">Перейти</a></div>
+											<div class="product-list-main__share"><a href="#" class="btn-share"></a></div>
 										</div>
 									</div>
 								</div>
 
 								<div class="col-3">
-									<div class="product-list__item" style="background-image: url(img/product4.jpg);">
-										<div class="product-list__content">
-											<div class="product-list__name">Шкафы-купе</div>
-											<div class="product-list__text">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться.</div>
-											<div class="product-list__link"><a href="#">Перейти</a></div>
-											<div class="product-list__share"><a href="#" class="btn-share"></a></div>
+									<div class="product-list-main__item js-product-item" style="background-image: url(img/product4.jpg);">
+										<div class="product-list-main__content">
+											<div class="product-list-main__name">Шкафы-купе</div>
+											<div class="product-list-main__text">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться.</div>
+											<div class="product-list-main__link"><a href="#">Перейти</a></div>
+											<div class="product-list-main__share"><a href="#" class="btn-share"></a></div>
 										</div>
 									</div>
 								</div>
@@ -177,21 +178,22 @@
 								<div class="slider-about-list__item">
 									<img src="img/about-slider1.jpg" alt="">
 									<div class="slider-about-list__play-wrap">
-										<div class="slider-about-list__play"><a href="#" class="btn-play"><i></i></a></div>
+										<div class="slider-about-list__play"><a data-fancybox data-width="854" data-height="480" href="video/video-test1.mp4"class="btn-play"><i></i></a></div>
 										<div class="slider-about-list__label">Как мы работаем</div>
 									</div>
 								</div>
+
 								<div class="slider-about-list__item">
 									<img src="img/about-slider2.jpg" alt="">
 									<div class="slider-about-list__play-wrap">
-										<div class="slider-about-list__play"><a href="#" class="btn-play"><i></i></a></div>
+										<div class="slider-about-list__play"><a data-fancybox data-width="640" data-height="360" href="http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4" class="btn-play"><i></i></a></div>
 										<div class="slider-about-list__label">Как мы работаем</div>
 									</div>
 								</div>
 								<div class="slider-about-list__item">
 									<img src="img/about-slider3.jpg" alt="">
 									<div class="slider-about-list__play-wrap">
-										<div class="slider-about-list__play"><a href="#" class="btn-play"><i></i></a></div>
+										<div class="slider-about-list__play"><a data-fancybox data-width="640" data-height="360" href="video/video-test2.mp4" class="btn-play"><i></i></a></div>
 										<div class="slider-about-list__label">Как мы работаем</div>
 									</div>
 								</div>
@@ -250,70 +252,54 @@
 					</div>
 				</div>
 			</main>
-		</div>
-
-		<footer class="footer-wrap">
-			<div class="page-wrap">
-				<div class="footer">
-					<div class="footer__item footer__item--logo">
-						<span class="logo">Строй Монтаж.</span>
-						<p>Группа компаний "СтройМонтаж" 1998-2018</p>
-					</div>
-		
-					<div class="footer__item footer__item--menu">
-						<div class="footer-menu">
-							<div class="footer-head">Меню</div>
-		
-							<ul class="footer-menu__list">
-								<li class="footer-menu__item"><span><a href="#" class="footer-menu__link">О компании</a></span></li>
-								<li class="footer-menu__item"><span><a href="#" class="footer-menu__link">Сотрудничество</a></span></li>
-								<li class="footer-menu__item"><span><a href="#" class="footer-menu__link">Продукция</a></span></li>
-								<li class="footer-menu__item"><span><a href="#" class="footer-menu__link">Наши партнёры</a></span></li>
-								<li class="footer-menu__item"><span><a href="#" class="footer-menu__link">Новости</a></span></li>
-								<li class="footer-menu__item"><span><a href="#" class="footer-menu__link">Представительства</a></span></li>
-							</ul>
+			<footer class="footer-wrap">
+				<div class="page-wrap">
+					<div class="footer">
+						<div class="footer__item footer__item--logo">
+							<span class="logo">Строй Монтаж.</span>
+							<p>Группа компаний "СтройМонтаж" 1998-2018</p>
 						</div>
-					</div>
-		
-					<div class="footer__item footer__item--subscribe">
-						<div class="footer-head">Подпишитесь на нашу расылку</div>
-		
-						<form class="form-subscribe">
-							<p>Подпишитесь и первыми узнайте об актуальных новостях и акциях компании</p>
-							<div class="form-subscribe__title">Ваш email</div>
-							<input type="text" placeholder="stroymontag@gmail.com">
-							<input type="submit" value="Подписаться" class="btn">
-						</form>
-					</div>
-		
-					<div class="footer__item footer__item--contact">
-						<div class="footer-head">Контакты</div>
-						<div class="footer-contact">
-							<div class="footer-contact__adress">Россия, г. Тверь, ул. Индустриальная, 13</div>
-							<div class="footer-contact__phone"><a href="tel:+78005559325">+7 (800) 555-9325</a></div>
-							<div class="footer-contact__mail"><a href="mailto:info@stroymontag.ru">info@stroymontag.ru</a></div>
+			
+						<div class="footer__item footer__item--menu">
+							<div class="footer-menu">
+								<div class="footer-head">Меню</div>
+			
+								<ul class="footer-menu__list">
+									<li class="footer-menu__item"><span><a href="#" class="footer-menu__link">О компании</a></span></li>
+									<li class="footer-menu__item"><span><a href="#" class="footer-menu__link">Сотрудничество</a></span></li>
+									<li class="footer-menu__item"><span><a href="#" class="footer-menu__link">Продукция</a></span></li>
+									<li class="footer-menu__item"><span><a href="#" class="footer-menu__link">Наши партнёры</a></span></li>
+									<li class="footer-menu__item"><span><a href="#" class="footer-menu__link">Новости</a></span></li>
+									<li class="footer-menu__item"><span><a href="#" class="footer-menu__link">Представительства</a></span></li>
+								</ul>
+							</div>
+						</div>
+			
+						<div class="footer__item footer__item--subscribe">
+							<div class="footer-head">Подпишитесь на нашу расылку</div>
+			
+							<form class="form-subscribe">
+								<p>Подпишитесь и первыми узнайте об актуальных новостях и акциях компании</p>
+								<div class="form-subscribe__title">Ваш email</div>
+								<input type="text" placeholder="stroymontag@gmail.com">
+								<input type="submit" value="Подписаться" class="btn">
+							</form>
+						</div>
+			
+						<div class="footer__item footer__item--contact">
+							<div class="footer-head">Контакты</div>
+							<div class="footer-contact">
+								<div class="footer-contact__adress">Россия, г. Тверь, ул. Индустриальная, 13</div>
+								<div class="footer-contact__phone"><a href="tel:+78005559325">+7 (800) 555-9325</a></div>
+								<div class="footer-contact__mail"><a href="mailto:info@stroymontag.ru">info@stroymontag.ru</a></div>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-		</footer>
-	
-		<!-- <div class="container">
-			<div class="row">
-				<div class="col-1"><div class="box">1</div></div>
-				<div class="col-1"><div class="box">2</div></div>
-				<div class="col-1"><div class="box">3</div></div>
-				<div class="col-1"><div class="box">4</div></div>
-				<div class="col-1"><div class="box">5</div></div>
-				<div class="col-1"><div class="box">6</div></div>
-				<div class="col-1"><div class="box">7</div></div>
-				<div class="col-1"><div class="box">8</div></div>
-				<div class="col-1"><div class="box">9</div></div>
-				<div class="col-1"><div class="box">10</div></div>
-				<div class="col-1"><div class="box">11</div></div>
-				<div class="col-1"><div class="box">12</div></div>
-			</div>
-		</div> -->
+			</footer>
+		</div>
+
+		
 		<script src="js/jquery-3.3.1.min.js"></script>
 		<script src="js/vendor/owlcarousel/owl.carousel.min.js"></script>
 		<script src="js/vendor/owlcarousel/owl.carousel.thumbs.min.js"></script>

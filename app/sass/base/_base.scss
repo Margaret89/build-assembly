@@ -46,6 +46,7 @@ a:focus{
 p{
 	@include font(normal, 400, 15px, 24px, $color-text);
 	padding: 5px 0;
+	letter-spacing: -0.15px;
 }
 
 h1,
@@ -79,6 +80,11 @@ h6,
 	@include font(normal, 400, 18px, 24px, $color-text);
 }
 
+h1 + p,
+.tipa-h1 + p{
+	margin-top: 11px;
+}
+
 .wrapper{
 	width: 100%;
 	max-width: 1903px;
@@ -107,20 +113,36 @@ h6,
 	text-transform: uppercase;
 	padding: 0 38px;
 	text-align: center;
+	cursor: pointer;
+	text-decoration: none;
 
-	&:hover{
-		background: #eacb60;
-	}
 }
 
 input[type="submit"].btn{
 	display: inline-block;
-	height: 44px;
+	height: 43px;
 	border-radius: 22px;
 	background: $color-yellow;
-	@include font(normal, 500, 15px, 42px, #fff);
-	padding: 0 18px;
+	@include font(normal, 700, 16px, 42px, #fff);
+	text-transform: none;
+	padding: 0 20px;
 	text-align: center;
+	cursor: pointer;
+	min-width: 150px;
+	border: none;
+	outline: none;
+}
+
+input[type="submit"].btn--big{
+	@include font(normal, 700, 16px, 38px, #fff);
+	height: 50px;
+	border-radius: 25px;
+	min-width: 195px;
+}
+
+.btn:hover,
+input[type="submit"].btn:hover{
+	background: #eacb60;
 }
 
 .code{
@@ -145,15 +167,28 @@ input[type="submit"].btn{
 	height: 300px;
 }
 
+@keyframes arr-move-down{
+	0% {-webkit-transform: translateY(-50%);transform: translateY(-50%);}
+	50% {-webkit-transform: translateY(2px);transform: translateY(2px);}
+	100% {-webkit-transform: translateY(-50%);transform: translateY(-50%);}
+}
+
+@-webkit-keyframes arr-move-down{
+	0% {-webkit-transform: translateY(-50%);transform: translateY(-50%);}
+	50% {-webkit-transform: translateY(2px);transform: translateY(2px);}
+	100% {-webkit-transform: translateY(-50%);transform: translateY(-50%);}
+}
+
 .btn-scroll{
 	display: inline-block;
 	width: 50px;
 	height: 50px;
 	border-radius: 50%;
-	background: $color-yellow url(#{$path-img}/arr-down.png) no-repeat center;
+	background: $color-yellow;
 	cursor: pointer;
 	vertical-align: middle;
 	position: relative;
+	outline: none;
 
 	&::before{
 		content: '';
@@ -168,8 +203,21 @@ input[type="submit"].btn{
 		@include top-center;
 	}
 
-	&:hover{
-		border-color: rgba(254,254,254,0.5);
+	&::after{
+		content: '';
+		display: block;
+		width: 12px;
+		height: 7px;
+		background: url(#{$path-img}/arr-down.png) no-repeat center;
+		position: absolute;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		@include top-center;
+	}
+
+	&:hover::after{
+		animation: arr-move-down 0.8s infinite ease-in-out;
 	}
 }
 
@@ -220,6 +268,12 @@ input[type="submit"].btn{
 	}
 }
 
+@keyframes play-scale {
+	0%  {transform: scale(1);}
+	50% {transform: scale(1.2);}
+	100% {transform: scale(1);}
+}
+
 .btn-play{
 	display: inline-block;
 	width: 95px;
@@ -229,6 +283,7 @@ input[type="submit"].btn{
 	position: relative;
 	z-index: 1;
 	text-align: center;
+	outline: none;
 
 	&::after{
 		content: '';
@@ -264,4 +319,12 @@ input[type="submit"].btn{
 		border-left: 15px solid #fff;
 		
 	}
+
+	&:hover{
+		animation: play-scale 0.8s infinite linear;
+	}
+}
+
+.bg-grey{
+	background: #f4f4f6;
 }

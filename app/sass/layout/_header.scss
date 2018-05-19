@@ -5,6 +5,10 @@
 	padding-bottom: 42px;
 }
 
+.header-wrap{
+	background: #452560;
+}
+
 /* header */
 .header{
 	display: table;
@@ -36,20 +40,40 @@
 	font-size: 0;
 
 	&__item{
-		padding: 10px 24.5px;
 		margin: 0;
 		list-style: none;
 		display: inline-block;
 		vertical-align: middle;
+		position: relative;
 	}
 
 	&__link{
+		padding: 10px 24.5px;
 		@include font(normal, 400, 15px, 1.4, #fff);
 		text-decoration: none;
 	}
 
 	&__link:hover{
 		color: $color-yellow;
+		cursor: pointer;
+	}
+
+	&__link::after{
+		content: '';
+		display: block;
+		height: 5px;
+		width: 100%;
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: -56px;
+		background: $color-yellow;
+		display: none;
+	}
+
+	&__link:hover::after,
+	&__link.current::after{
+		display: block;
 	}
 }
 
@@ -138,7 +162,7 @@
 		top: 200px;
 		// left: 250px;
 		left: 100%;
-		letter-spacing: -0.15px;
+		letter-spacing: -0.1px;
 	}
 
 	.owl-item.no-anim-text &__text{

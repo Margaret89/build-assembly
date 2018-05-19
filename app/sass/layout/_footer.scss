@@ -96,10 +96,22 @@
 		margin-top: 14px;
 	}
 
-	input[type="text"]{
+	input[type="text"],
+	input[type="submit"]{
+		vertical-align: top;
 		border: 0;
 		outline: 0;
-		@include font(normal, 400, 14px, 18px, #fff);
+	}
+
+	input[type="text"]{
+		@include font(normal, 400, 15px, 18px, #fff);
+		width: 218px;
+		background: transparent;
+		border-bottom: 2px solid $color-yellow;
+		height: 32px;
+		margin-top: 3px;
+		letter-spacing: 0.15px;
+		margin-right: 19px;
 	}
 }
 
@@ -126,5 +138,6 @@
 	&__mail{
 		@include font(normal, 400, 15px, 24px, $color-yellow);
 		letter-spacing: -0.15px;
+		margin-top: 3px;
 	}
 }

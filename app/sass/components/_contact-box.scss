@@ -1,0 +1,69 @@
+﻿/*----------- Contact box -------------*/
+.contact-box{
+	display: table;
+	width: 100%;
+	margin-top: 50px;
+
+	&__map,
+	&__info{
+		display: table-cell;
+		vertical-align: middle;
+	}
+
+	&__map{
+		width: 1122px;
+	}
+
+	&__info{
+		padding-left: 55px;
+	}
+
+	#map{
+		width: 100%;
+		height: 750px;
+	}
+}
+
+.contact-info{
+	max-width: 470px;
+
+	&__item{
+		display: table;
+		width: 100%;
+		margin-bottom: 48px;
+	}
+
+	&__icon,
+	&__text{
+		display: table-cell;
+		vertical-align: top;
+	}
+
+	&__icon{
+		width: 55px;
+		padding-top: 9px;
+	}
+
+	p{
+		@include font(normal, 500, 26px, 36px, $color-text);
+		letter-spacing: -0.1px;
+	}
+
+	.social-list{
+		float: none;
+	}
+
+	.social-list__item a,
+	.social-list__item{
+		@include font(normal, 500, 13px, 24px, $color-yellow);
+		letter-spacing: -0.15px;
+	}
+
+	a[href*="tel:"]{
+		color: $color-text;
+	}
+
+	.btn{
+		width: 238px;
+	}
+}

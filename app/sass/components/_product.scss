@@ -1,4 +1,9 @@
 ﻿/*----------- Product -------------*/
+@keyframes product-scale {
+	0%  {transform: scale(0, 0);}
+	100% {transform: scale(1, 1);}
+}
+
 .product-head{
 	display: table;
 	width: 100%;
@@ -18,7 +23,7 @@
 	}
 }
 
-.product-list{
+.product-list-main{
 	margin-top: 53px;
 
 	&__item{
@@ -27,6 +32,19 @@
 		position: relative;
 		background-repeat: no-repeat;
 		background-position: center;
+		transform: scale(0, 0);
+	}
+
+	&.no-anim{
+		transform: scale(1, 1);
+	}
+
+	&.anim &__item{
+		animation-name: product-scale;
+		animation-timing-function: ease;
+		animation-duration: 1s;
+		animation-iteration-count: 1;
+		animation-fill-mode: forwards;
 	}
 
 	&__content{
@@ -53,6 +71,7 @@
 		@include font(normal, 400, 15px, 24px, #fff);
 		letter-spacing: -0.15px;
 		margin-bottom: 13px;
+		text-transform: none;
 	}
 
 	&__link,
@@ -91,5 +110,113 @@
 
 	&__share{
 		text-align: right;
+	}
+}
+
+.product-list{
+	margin-top: 53px;
+
+	&__item{
+		width: 100%;
+		height: 711px;
+		position: relative;
+		background-repeat: no-repeat;
+		background-position: center;
+		margin-bottom: 30px;
+	}
+
+	&__content{
+		position: absolute;
+		display: table;
+		width: 100%;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		padding: 30px 37px 42px 37px;
+		background: #333240;
+		margin: 0 auto;
+	}
+
+	&__content-item{
+		display: table-cell;
+		vertical-align: top;
+	}
+
+	&__content-item:last-child{
+		width: 98px;
+	}
+
+	&__item:hover{
+		outline: 10px solid $color-yellow;
+		outline-offset: -10px;
+	}
+
+	&__item:hover &__content{
+		width: calc(100% - 20px);
+		padding: 30px 27px 32px 27px;
+		bottom: 10px;
+	}
+
+	&__name{
+		@include font(normal, 500, 32px, 42px, #fff);
+		margin-bottom: 5px;
+	}
+
+	&__text{
+		@include font(normal, 400, 15px, 24px, #fff);
+		letter-spacing: -0.15px;
+		margin-bottom: 13px;
+		text-transform: none;
+		max-width: 470px;
+	}
+
+	&__link,
+	&__link a{
+		@include font(normal, 500, 16px, 30px, $color-yellow);
+		text-transform: uppercase;
+		text-decoration: none;
+		letter-spacing: 0.15px;
+	}
+
+	&__link{
+		margin-bottom: -1px;
+	}
+
+	&__link a{
+		cursor: pointer;
+		position: relative;
+	}
+
+	&__link a::after{
+		content: '';
+		display: block;
+		width: 100%;
+		height: 3px;
+		background: $color-yellow;
+		position: absolute;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		bottom: -7px;
+	}
+
+	&__link a:hover::after{
+		display: none;
+	}
+
+	&__share{
+		position: absolute;
+		right: 58px;
+		bottom: 32px;
+	}
+
+	&__item:hover &__share{
+		right: 48px;
+		bottom: 22px;
+	}
+
+	&__icon{
+		width: 98px;
+		text-align: center;
 	}
 }
