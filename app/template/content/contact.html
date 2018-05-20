@@ -20,153 +20,137 @@
 							<div class="col-12">
 								<div class="product-head__item">
 									<span class="tipa-h1 stroke-left">Наши контакты</span>
-									<p style="padding-left: 35px;">Мы знаем, что одни факты не могут вдохновлять на действия.</p>
+									<p class="indent-left">Мы знаем, что одни факты не могут вдохновлять на действия.</p>
 								</div>
 							</div>
-						</div>
-					</div>
-
-					<div class="contact-box">
-						<div class="contact-box__map">
-							<div id="map"></div>
-							<script async defer src="https://maps.googleapis.com/maps/api/js?callback=initMap"></script>
-
-							<script type="text/javascript">
-								// Определяем переменную map
-								var map;
-
-								// Функция initMap которая отрисует карту на странице
-								function initMap() {
-
-									// В переменной map создаем объект карты GoogleMaps и вешаем эту переменную на <div id="map"></div>
-									map = new google.maps.Map(document.getElementById('map'), {
-										// При создании объекта карты необходимо указать его свойства
-										// center - определяем точку на которой карта будет центрироваться
-										center: {lat: 53.273475, lng: 34.349792},
-										// zoom - определяет масштаб. 0 - видно всю платнеу. 18 - видно дома и улицы города.
-										zoom: 12,
-										// Добавляем свои стили для отображения карты
-										styles: [{"featureType":"all","elementType":"labels.text.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#42424d"},{"weight":2},{"gamma":"1"}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry","stylers":[{"weight":0.6},{"color":"#545b6b"},{"gamma":"0"}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#545b6b"},{"gamma":"1"},{"weight":"10"}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#666c7b"}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#545b6b"}]},{"featureType":"road","elementType":"geometry","stylers":[{"color":"#424a5b"},{"lightness":"0"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#666c7b"}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#2e3546"}]}]
-
-
-
-
-									});
-
-									// Создаем маркер на карте
-									var marker = new google.maps.Marker({
-										// Определяем позицию маркера
-										position: {lat: 53.273475, lng: 34.349792},
-										// Указываем на какой карте он должен появится. (На странице ведь может быть больше одной карты)
-										map: map,
-
-										// Пишем название маркера - появится если навести на него курсор и немного подождать
-										title: 'Тестовый адрес',
-
-										// Укажем свою иконку для маркера
-										icon: 'img/mark-map.png'
-									});
-								}
-								
-								
-							</script>
-								
-						</div>
-
-						<div class="contact-box__info">
-							<div class="contact-info">
-								<div class="contact-info__item">
-									<div class="contact-info__icon"><img src="img/ic-social.png" alt=""></div>
-									<div class="contact-info__text">
-										<p>Следите за нами</p>
-										<ul class="social-list clearfix">
-											<li class="social-list__item"><a href="#" class="social-list__link">FACEBOOK</a></li>
-											<li class="social-list__item"><a href="#" class="social-list__link">INSTAGRAM</a></li>
-											<li class="social-list__item"><a href="#" class="social-list__link">Одноклассники</a></li>
-											<li class="social-list__item"><a href="#" class="social-list__link">Вконтакте</a></li>
-											<li class="social-list__item"><a href="#" class="social-list__link">YOUTUBE</a></li>
-										</ul>
-									</div>
-								</div>
-
-								<div class="contact-info__item">
-									<div class="contact-info__icon"><img src="img/ic-phone.png" alt=""></div>
-									<div class="contact-info__text">
-										<p><a href="tel:+78005559325">+7 (800) 555-9325</a></p>
-									</div>
-								</div>
-
-								<div class="contact-info__item">
-									<div class="contact-info__icon"><img src="img/ic-map.png" alt=""></div>
-									<div class="contact-info__text">
-										<p>Центральный офис, Россия, г.&nbsp;Тверь, ул.&nbsp;Индустриальная, 13</p>
-									</div>
-								</div>
-							</div>
-
-							<a href="#" class="btn">Напишите нам</a>
-						</div>
-					</div>
-
-					<div class="form-wrap bg-grey" style="margin-bottom: -100px;">
-						<div class="form-site">
-							<form>
-								<div class="form-site__head">Напишите нам:</div>
-
-								<div class="form-site__fields clearfix">
-									<div class="form-site__item">
-										<label for="name" class="form-site__label">Имя *</label>
-										<input type="text" id="name">
-									</div>
-
-									<div class="form-site__item">
-										<label for="surename" class="form-site__label">Фамилия *</label>
-										<input type="text" id="surename">
-									</div>
-
-									<div class="form-site__item">
-										<label for="email" class="form-site__label">Email *</label>
-										<input type="text" id="email">
-									</div>
-
-									<div class="form-site__item">
-										<label for="phone" class="form-site__label">Номер телефона *</label>
-										<input type="text" id="phone">
-									</div>
-
-									<div class="form-site__item form-site__item--full">
-										<label for="phone" class="form-site__label">Сообщение *</label>
-										<textarea placeholder="Введите ваше сообщение сюда"></textarea>
-									</div>
-								</div>
-
-								<input type="submit" value="Отправить" class="btn btn--big">
-							</form>
 						</div>
 					</div>
 				</div>
+
+				<div class="contact-box">
+					<div class="contact-box__map">
+						<div id="map"></div>
+						<script async defer src="https://maps.googleapis.com/maps/api/js?callback=initMap"></script>
+
+						<script type="text/javascript">
+							// Определяем переменную map
+							var map;
+
+							// Функция initMap которая отрисует карту на странице
+							function initMap() {
+
+								// В переменной map создаем объект карты GoogleMaps и вешаем эту переменную на <div id="map"></div>
+								map = new google.maps.Map(document.getElementById('map'), {
+									// При создании объекта карты необходимо указать его свойства
+									// center - определяем точку на которой карта будет центрироваться
+									center: {lat: 53.273475, lng: 34.349792},
+									// zoom - определяет масштаб. 0 - видно всю платнеу. 18 - видно дома и улицы города.
+									zoom: 12,
+									// Добавляем свои стили для отображения карты
+									styles: [{"featureType":"all","elementType":"labels.text.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#42424d"},{"weight":2},{"gamma":"1"}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry","stylers":[{"weight":0.6},{"color":"#545b6b"},{"gamma":"0"}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#545b6b"},{"gamma":"1"},{"weight":"10"}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#666c7b"}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#545b6b"}]},{"featureType":"road","elementType":"geometry","stylers":[{"color":"#424a5b"},{"lightness":"0"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#666c7b"}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#2e3546"}]}]
+
+
+
+
+								});
+
+								// Создаем маркер на карте
+								var marker = new google.maps.Marker({
+									// Определяем позицию маркера
+									position: {lat: 53.273475, lng: 34.349792},
+									// Указываем на какой карте он должен появится. (На странице ведь может быть больше одной карты)
+									map: map,
+
+									// Пишем название маркера - появится если навести на него курсор и немного подождать
+									title: 'Тестовый адрес',
+
+									// Укажем свою иконку для маркера
+									icon: 'img/mark-map.png'
+								});
+							}
+							
+							
+						</script>
+							
+					</div>
+
+					<div class="contact-box__info">
+						<div class="contact-info">
+							<div class="contact-info__item">
+								<div class="contact-info__icon"><img src="img/ic-social.png" alt=""></div>
+								<div class="contact-info__text">
+									<p>Следите за нами</p>
+									<ul class="social-list clearfix">
+										<li class="social-list__item"><a href="#" class="social-list__link">FACEBOOK</a></li>
+										<li class="social-list__item"><a href="#" class="social-list__link">INSTAGRAM</a></li>
+										<li class="social-list__item"><a href="#" class="social-list__link">Одноклассники</a></li>
+										<li class="social-list__item"><a href="#" class="social-list__link">Вконтакте</a></li>
+										<li class="social-list__item"><a href="#" class="social-list__link">YOUTUBE</a></li>
+									</ul>
+								</div>
+							</div>
+
+							<div class="contact-info__item">
+								<div class="contact-info__icon"><img src="img/ic-phone.png" alt=""></div>
+								<div class="contact-info__text">
+									<p><a href="tel:+78005559325">+7 (800) 555-9325</a></p>
+								</div>
+							</div>
+
+							<div class="contact-info__item">
+								<div class="contact-info__icon"><img src="img/ic-map.png" alt=""></div>
+								<div class="contact-info__text">
+									<p>Центральный офис, Россия, г.&nbsp;Тверь, ул.&nbsp;Индустриальная, 13</p>
+								</div>
+							</div>
+						</div>
+
+						<a href="#write-us" class="btn js-link-move">Напишите нам</a>
+					</div>
+				</div>
+
+				<div class="form-wrap bg-grey" style="margin-bottom: -100px;">
+					<div class="form-site">
+						<div id="write-us"></div>
+						<form class="js-form-validator" method="post" id="contact-form">
+							<div class="form-site__head">Напишите нам:</div>
+
+							<div class="form-site__fields clearfix">
+								<div class="form-site__item">
+									<label for="name" class="form-site__label">Имя *</label>
+									<input type="text" id="name" required>
+								</div>
+
+								<div class="form-site__item">
+									<label for="surename" class="form-site__label">Фамилия *</label>
+									<input type="text" id="surename" required>
+								</div>
+
+								<div class="form-site__item">
+									<label for="email" class="form-site__label">Email *</label>
+									<input type="email" id="email" required>
+								</div>
+
+								<div class="form-site__item">
+									<label for="phone" class="form-site__label">Номер телефона *</label>
+									<input type="text" id="phone" required>
+								</div>
+
+								<div class="form-site__item form-site__item--full">
+									<label for="phone" class="form-site__label">Сообщение *</label>
+									<textarea placeholder="Введите ваше сообщение сюда" required></textarea>
+								</div>
+							</div>
+
+							<input type="submit" value="Отправить" class="btn btn--big">
+							<!-- <span class="alert alert-success" role="alert">Ваше сообщение успешно отправлено</span> -->
+						</form>
+					</div>
+				</div>
+				
 			</main>
 			//= ../footer/footer.html
 		</div>
-
-		
-	
-		<!-- <div class="container">
-			<div class="row">
-				<div class="col-1"><div class="box">1</div></div>
-				<div class="col-1"><div class="box">2</div></div>
-				<div class="col-1"><div class="box">3</div></div>
-				<div class="col-1"><div class="box">4</div></div>
-				<div class="col-1"><div class="box">5</div></div>
-				<div class="col-1"><div class="box">6</div></div>
-				<div class="col-1"><div class="box">7</div></div>
-				<div class="col-1"><div class="box">8</div></div>
-				<div class="col-1"><div class="box">9</div></div>
-				<div class="col-1"><div class="box">10</div></div>
-				<div class="col-1"><div class="box">11</div></div>
-				<div class="col-1"><div class="box">12</div></div>
-			</div>
-		</div> -->
 		//= ../footer/footer-script.html
 	</body>
 </html>

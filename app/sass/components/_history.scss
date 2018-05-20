@@ -1,0 +1,92 @@
+﻿/*----------- History -------------*/
+.history{
+	display: table;
+	width: 100%;
+	margin-top: 38px;
+
+	&__item{
+		display: table-cell;
+		vertical-align: top;
+		padding: 0 15px;
+	}
+
+	&__item:first-child{
+		padding-left: 0;
+	}
+
+	&__item:last-child{
+		padding-right: 0;
+	}
+
+	&__item--left{
+		width: 175px;
+	}
+
+	&__item--right{
+		width: 280px;
+	}
+
+	&__head{
+		@include font(normal, 500, 14px, 24px, $color-text);
+		text-transform: uppercase;
+		letter-spacing: -0.5px;
+		margin-top: 8px;
+		display: inline-block;
+	}
+
+	p{
+		@include font(normal, 500, 25px, 36px, $color-text);
+		letter-spacing: 0.2px;
+		margin-bottom: 24px;
+	}
+
+	.advant-box{
+		margin-top: 10px;
+	}
+}
+
+.history-slider{
+	width: 100%;
+	max-width: 800px;
+	margin-bottom: 119px;
+}
+
+.slider-history-thumb{
+	margin-top: 16px;
+
+	&__item{
+		@include font(normal, 500, 14px, 24px, rgba(51,50,64,0.54));
+		float: left;
+		padding: 0 16px;
+		cursor: pointer;
+	}
+
+	&__item:first-child{
+		padding-left: 0;
+	}
+
+	&__item.active,
+	&__item:hover{
+		color: $color-yellow;
+	}
+}
+
+.history-text{
+	padding-left: 225px;
+	margin-top: 95px;
+	max-width: 985px;
+}
+
+.cooperation{
+	background: url(#{$path-img}/bg-cooperation.jpg) no-repeat center 0;
+	background-size: cover;
+	color: #fff;
+	margin-top: 90px;
+	padding: 210px 0 70px;
+
+	p,
+	h1,
+	.tipa-h1{
+		color: #fff;
+	}
+}

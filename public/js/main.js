@@ -57,6 +57,18 @@ $(document).ready(function () {
 		});
 	}
 
+	//  --------- Слайдер 'История' ---------
+	var $historySlider = $('.js-history-slider');
+	if ($historySlider.length) {
+		$('.js-history-slider').owlCarousel({
+			items: 1,
+			thumbs: true,
+			nav: false,
+			dots: false,
+			thumbsPrerendered: true,
+		});
+	}
+
 	// --------- Плавный переход к ссылке ---------
 	if ($('.js-link-move').length) {
 		$('body').on('click','.js-link-move', function (event) {
@@ -98,5 +110,30 @@ $(document).ready(function () {
 			}
 		});
 	}
+
+	// --------- Анимация съезжающего текста ---------
+	if ($('.js-moving-text').length) {
+		var topMoveText = $('.js-moving-text').offset().top;
+		var topMoveTextScroll = topMoveText - $(window).outerHeight();
+
+		$(window).scroll(function(){
+			if(($(this).scrollTop()>=topMoveTextScroll) && (!$('.js-moving-text').hasClass('anim'))){
+				$('.js-moving-text').addClass('anim');
+			}
+		});
+	}
+
+	//---------- Вывод сообщения в web-форме -------------
+	$('.js-form-validator').each(function(){
+		$(this).on('submit',function(e){
+			$(this).find('input[type="submit"]').after('<span class="alert alert-success" role="alert">Ваше сообщение успешно отправлено</span>');
+			$(this)[0].reset();
+			e.preventDefault();
+		});
+	});
+
+	//---------- Маска для телефона -------------
+	 $.mask.definitions['~'] = "[+-]";
+	 $("#phone").mask("(999) 999-9999");
 
 });

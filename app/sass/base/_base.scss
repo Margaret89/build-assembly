@@ -17,10 +17,10 @@ textarea {
 	resize: vertical;
 }
 
-// .box{
-// 	height: 800px;
-// 	background: red;
-// }
+.box{
+	height: 800px;
+	background: red;
+}
 
 html,
 body{
@@ -118,6 +118,10 @@ h1 + p,
 
 }
 
+.btn + .alert{
+	margin-left: 10px;
+}
+
 input[type="submit"].btn{
 	display: inline-block;
 	height: 43px;
@@ -143,6 +147,27 @@ input[type="submit"].btn--big{
 .btn:hover,
 input[type="submit"].btn:hover{
 	background: #eacb60;
+}
+
+.btn-white{
+	display: inline-block;
+	height: 50px;
+	border-radius: 25px;
+	background: transparent;
+	border: 2px solid $color-yellow;
+	@include font(normal, 500, 15px, 45px, $color-yellow);
+	text-transform: uppercase;
+	padding: 0 30px;
+	text-align: center;
+	cursor: pointer;
+	text-decoration: none;
+	min-width: 308px;
+	letter-spacing: 1.75px;
+}
+
+.btn-white:hover {
+	background: $color-yellow;
+	color: #fff;
 }
 
 .code{
@@ -276,6 +301,7 @@ input[type="submit"].btn:hover{
 
 .btn-play{
 	display: inline-block;
+	vertical-align: middle;
 	width: 95px;
 	height: 95px;
 	border-radius: 50%;
@@ -328,3 +354,166 @@ input[type="submit"].btn:hover{
 .bg-grey{
 	background: #f4f4f6;
 }
+
+.label-pic{
+	@include font(italic, 400, 13px, 24px, rgba(51,50,64,0.68));
+	letter-spacing: -0.5px;
+	margin-top: 14px;
+}
+
+.indent-left{
+	padding-left: 35px;
+}
+
+.container.indent-left{
+	padding-left: 50px;
+}
+
+/* advant-box */
+.advant-box{
+	display: inline-block;
+
+	&__text{
+		@include font(normal, 400, 15px, 18px, $color-text);
+		letter-spacing: -0.15px;
+	}
+
+	&__head{
+		@include font(normal, 900, 48px, 48px, $color-yellow);
+		letter-spacing: -0.15px;
+	}
+
+	&__head + &__text{
+		margin-top: 10px;
+	}
+
+	&--big &__head{
+		font-size: 60px;
+		line-height: 60px;
+	}
+
+	&--big &__text{
+		line-height: 24px;
+	}
+
+	&--big &__head + &__text{
+		margin-top: 6px;
+	}
+}
+
+.advant-box-wrap{
+	font-size: 0;
+	margin-top: 120px;
+
+	&__item{
+		display: inline-block;
+		vertical-align: top;
+		width: calc(33.33% - 40px);
+		margin: 0 30px 44px;
+	}
+
+	&__item:nth-child(3n+1){
+		margin-left: 0;
+	}
+
+	&__item:nth-child(3n){
+		margin-right: 0;
+	}
+}
+
+/* moving-text */
+@keyframes moving-line{
+	0% {width: 0;}
+	50% {width: 100%;}
+	100% {width: 100%;}
+}
+
+@keyframes moving-text{
+	0% {left: 0;}
+	80% {left: 0;}
+	100% {left: -18px;}
+}
+
+.moving-text-wrap{
+	position: relative;
+	width: 100%;
+	height: 154px;
+	margin-top: 76px;
+}
+
+.moving-text{
+	@include font(normal, 900, 154px, 154px, #f4f4f6);
+	letter-spacing: -12px;
+	text-transform: uppercase;
+	text-align: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+
+	&__top,
+	&__bot {
+		overflow: hidden;
+	}
+
+	&__top:before,
+	&__bot:before {
+		content: attr(title);
+	}
+
+	&__top {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 50%;
+	}
+
+	&.anim &__top{
+		animation: moving-text 1.5s 1 ease;
+		animation-fill-mode: forwards;
+		animation-delay: 1s;
+	}
+
+	&__top:before {
+		position: absolute;
+		bottom: -70px;
+		left: 0;
+		right: 0;
+	}
+
+	&__bot {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
+
+	&__bot:before {
+		position: absolute;
+		top: -83px;
+		left: 0;
+		right: 0;
+	}
+
+	&__line{
+		display: block;
+		height: 1px;
+		width: 0;
+		background: #ededed;
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 50%;
+		overflow: hidden;
+	}
+
+	&.anim &__line{
+		animation: moving-line 2s 1 ease;
+		animation-fill-mode: forwards;
+		animation-delay: 1s;
+	}
+}
+

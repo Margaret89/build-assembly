@@ -1,7 +1,7 @@
 ﻿/*----------- Form site -------------*/
 .form-wrap{
 	padding: 125px 0 138px;
-	margin-top: 140px;
+	margin-top: 65px;
 }
 
 .form-site{
@@ -42,6 +42,7 @@
 		margin-bottom: 10px;
 	}
 
+	input[type="email"],
 	input[type="text"],
 	textarea{
 		border: none;
@@ -54,6 +55,7 @@
 		letter-spacing: 0.15px;
 	}
 
+	input[type="email"],
 	input[type="text"]{
 		height: 49px;
 	}
@@ -65,5 +67,27 @@
 
 	.btn{
 		margin-top: 5px;
+	}
+}
+
+.form-site-cooperation{
+	input[type="submit"].btn--big{
+		padding: 0 35px;
+	}
+
+	.form-site__item:nth-child(odd){
+		padding-left: 15px;
+		padding-right: 0;
+	}
+
+	.form-site__item:nth-child(even){
+		padding-right: 15px;
+		padding-left: 0;
+	}
+
+	.form-site__item--full:nth-child(odd),
+	.form-site__item--full:nth-child(even){
+		width: 100%;
+		padding: 0;
 	}
 }
