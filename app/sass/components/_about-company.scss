@@ -36,3 +36,24 @@
 		margin-bottom: 7px;
 	}
 }
+
+@media (max-width: 1279px) {
+	.about-company__item--text{
+		padding: 0 30px;
+	}
+}
+
+@media (max-width: 991px) {
+	.about-company,
+	.about-company__item{
+		display: block;
+		max-width: 720px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.about-company__item--text{
+		padding: 0;
+		margin-top: 30px;
+	}
+}

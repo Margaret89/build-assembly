@@ -54,6 +54,18 @@ $(document).ready(function () {
 			nav: true,
 			dots: false,
 			margin: 30,
+			responsive:{
+				0:{
+					items:1,
+				},
+				768:{
+					items:2,
+				},
+				992:{
+					items:3,
+					nav:true,
+				}
+			}
 		});
 	}
 
@@ -133,7 +145,33 @@ $(document).ready(function () {
 	});
 
 	//---------- Маска для телефона -------------
-	 $.mask.definitions['~'] = "[+-]";
-	 $("#phone").mask("(999) 999-9999");
+	$.mask.definitions['~'] = "[+-]";
+	$("#phone").mask("(999) 999-9999");
 
+	// --------- Мобильное меню ---------
+	if ($('.js-hamburger').length) {
+		$('.js-hamburger').click(function() {
+			$(this).toggleClass('active');
+			$('.js-page').toggleClass('no-scroll');
+			$('.js-header-nav').toggleClass('open');
+
+			if ($('.js-header-nav').hasClass('open')) {
+				var heightTopMenu = $('.js-top-menu').height();
+				console.log(heightTopMenu);
+				$('.js-header-nav').css('height', heightTopMenu);
+			}else{
+				$('.js-header-nav').css('height', '0');
+			}
+			// $('.js-top-panel-menu').slideToggle(300);
+		});
+
+		// $(document).click(function(event) {
+		// 	if ($(event.target).closest(".js-top-panel-menu").length) return;
+		// 	if ($(event.target).closest(".js-hamburger").length) return;
+			
+		// 	$('.js-hamburger').removeClass('active');
+		// 	$('.js-top-panel-menu').slideUp(300);
+		// 	event.stopPropagation();
+		// });
+	}
 });

@@ -22,11 +22,35 @@ textarea {
 	background: red;
 }
 
+button{
+	outline: none;
+}
+
 html,
 body{
 	background: #fff;
 	font-family: $font-site;
 	@include font(normal, 400, 15px, 1.4, $color-text);
+}
+
+body.no-scroll {
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	position: relative;
+}
+
+.page.no-scroll::after{
+	content: '';
+	display: block;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.5);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 20;
+	overflow: hidden;
 }
 
 main{
@@ -516,4 +540,40 @@ input[type="submit"].btn:hover{
 		animation-delay: 1s;
 	}
 }
+
+@media (max-width: 1720px) {
+	.wrapper,
+	.page-wrap{
+		max-width: 100%;
+	}
+	.page-wrap{
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}
+
+@media (min-width: 1280px) and (max-width: 1500px){
+	.container{
+		max-width: 1250px;
+	}
+}
+
+@media (max-width: 991px) {
+	main{
+		padding-top: 100px;
+	}
+
+	h1,
+	.tipa-h1{
+		font-size: 34px;
+	}
+}
+
+@media (max-width: 767px) {
+	.page-wrap {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+}
+
 
