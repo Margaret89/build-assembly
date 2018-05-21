@@ -18,3 +18,15 @@
 		margin-bottom: 24px;
 	}
 }
+
+@media (max-width: 1279px) {
+	.card-list__item{
+		padding: 0;
+	}
+}
+
+@media (max-width: 991px) {
+	.card-list__item{
+		margin-bottom: 25px;
+	}
+}

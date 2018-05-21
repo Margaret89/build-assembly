@@ -71,3 +71,15 @@
 		line-height: 36px;
 	}
 }
+
+@media (max-width: 479px) {
+	.slider-news.owl-theme .owl-nav{
+		top: -58px;
+	}
+
+	.slider-news__head a,
+	.slider-news__head{
+		font-size: 24px;
+		line-height: 32px;
+	}
+}

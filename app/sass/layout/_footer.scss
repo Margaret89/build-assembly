@@ -205,3 +205,12 @@
 		column-count: 2;
 	}
 }
+
+@media (max-width: 621px) {
+	.footer__item{
+		float: none;
+		padding-left: 0;
+		padding-right: 0;
+		width: 100%
+	}
+}

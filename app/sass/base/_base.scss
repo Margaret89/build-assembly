@@ -57,6 +57,10 @@ main{
 	padding: 132px 0 100px;
 }
 
+img{
+	max-width: 100%;
+}
+
 a{
 	color: $color-yellow;
 }
@@ -558,6 +562,30 @@ input[type="submit"].btn:hover{
 	}
 }
 
+@media (max-width: 1279px) {
+	.moving-text-wrap{
+		height: 115px;
+	}
+
+	.moving-text{
+		font-size: 115px;
+		line-height: 115px;
+	}
+
+	.moving-text__top::before{
+		bottom: -54px;
+	}
+
+	.moving-text__bot::before{
+		top: -60px;
+	}
+
+	.btn-white{
+		min-width: auto;
+		font-size: 12px;
+	}
+}
+
 @media (max-width: 991px) {
 	main{
 		padding-top: 100px;
@@ -567,6 +595,33 @@ input[type="submit"].btn:hover{
 	.tipa-h1{
 		font-size: 34px;
 	}
+
+	.btn-white{
+		font-size: 11px;
+		padding: 0 15px;
+		letter-spacing: 0.75px;
+	}
+
+	.moving-text-wrap{
+		height: 90px;
+	}
+	
+	.moving-text{
+		font-size: 90px;
+		line-height: 90px;
+	}
+
+	.moving-text__top::before{
+		bottom: -44px;
+	}
+
+	.moving-text__bot::before{
+		top: -44px;
+	}
+
+	.container.indent-left{
+		padding-left: 15px;
+	}
 }
 
 @media (max-width: 767px) {
@@ -574,6 +629,83 @@ input[type="submit"].btn:hover{
 		padding-left: 10px;
 		padding-right: 10px;
 	}
+
+	.container{
+		padding-left: 10px;
+		padding-right: 10px;
+		max-width: 100%;
+	}
+
+	.row{
+		margin-right: -10px;
+		margin-left: -10px;
+	}
+
+	h1,
+	.tipa-h1{
+		font-size: 28px;
+		line-height: 34px;
+	}
+
+	.moving-text-wrap{
+		height: 65px;
+		margin-top: 50px;
+	}
+	
+	.moving-text{
+		font-size: 65px;
+		line-height: 65px;
+		letter-spacing: -5px;
+	}
+
+	.moving-text__top::before{
+		bottom: -32px;
+	}
+
+	.moving-text__bot::before{
+		top: -32px;
+	}
 }
 
+@media (max-width: 621px) {
+	.moving-text-wrap{
+		height: 52px;
+	}
+	
+	.moving-text{
+		font-size: 52px;
+		line-height: 52px;
+	}
+
+	.moving-text__top::before{
+		bottom: -26px;
+	}
+
+	.moving-text__bot::before{
+		top: -26px;
+	}
+}
+
+@media (max-width: 479px) {
+	.stroke-left{
+		padding-left: 15px;
+	}
+
+	.moving-text-wrap{
+		height: 38px;
+	}
+	
+	.moving-text{
+		font-size: 38px;
+		line-height: 38px;
+	}
+
+	.moving-text__top::before{
+		bottom: -19px;
+	}
+
+	.moving-text__bot::before{
+		top: -19px;
+	}
+}
 

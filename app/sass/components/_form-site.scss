@@ -91,3 +91,31 @@
 		padding: 0;
 	}
 }
+
+@media (max-width: 767px) {
+	.form-site{
+		max-width: 100%;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	.form-wrap{
+		padding: 55px 0;
+	}
+}
+
+@media (max-width: 621px) {
+	.form-site__item,
+	.form-site__item:nth-child(odd),
+	.form-site__item:nth-child(even),
+	.form-site-cooperation .form-site__item:nth-child(2n),
+	.form-site-cooperation .form-site__item:nth-child(2n+1){
+		width: 100%;
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.form-site__item{
+		margin-bottom: 15px;
+	}
+}

@@ -90,3 +90,42 @@
 		width: 485px;
 	}
 }
+
+@media (max-width: 767px) {
+	.about-company,
+	.about-company__item--slider,
+	.slider-about{
+		max-width: 100%;
+	}
+
+	.about-company__item--slider{
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	.slider-about-thumb__item{
+		width: 80px;
+		height: 80px;
+	}
+
+	.slider-about-thumb__more{
+		width: 70px;
+		height: 70px;
+	}
+}
+
+@media (max-width: 479px) {
+	.slider-about-thumb__item{
+		width: 70px;
+		height: 70px;
+		border-width: 4px;
+		margin-right: 5px;
+	}
+
+	.slider-about-thumb__more{
+		width: 64px;
+		height: 64px;
+		font-size: 18px;
+		line-height: 24px;
+	}
+}
