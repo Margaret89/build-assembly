@@ -85,6 +85,11 @@
 	}
 }
 
+.main-top .top-menu__link:hover::after,
+.main-top .top-menu__link.current::after{
+	display: none;
+}
+
 @keyframes head-slide{
 	0% {margin-left: -100%;}
 	50% {margin-left: 250px;}

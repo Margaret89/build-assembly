@@ -135,6 +135,22 @@ $(document).ready(function () {
 		});
 	}
 
+	// --------- Анимация swipe слайдера новостей ---------
+	if ($('.js-move-slider').length) {
+		var topMoveSlider = $('.js-slider-news').offset().top;
+		var topMoveSliderScroll = topMoveSlider - $(window).outerHeight()/2;
+
+		$(window).scroll(function(){
+			if(($(this).scrollTop()>=topMoveSliderScroll) && (!$('.js-move-slider').hasClass('anim'))){
+				$('.js-move-slider').addClass('anim');
+				setTimeout(function(){
+					$('.js-slider-news').trigger('next.owl.carousel');
+				},1600); 
+				
+			}
+		});
+	}
+
 	//---------- Вывод сообщения в web-форме -------------
 	$('.js-form-validator').each(function(){
 		$(this).on('submit',function(e){
