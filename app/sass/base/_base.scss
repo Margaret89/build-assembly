@@ -130,6 +130,7 @@ h1 + p,
 	text-transform: uppercase;
 	letter-spacing: 1.5px;
 	white-space: nowrap;
+	text-decoration: none;
 }
 
 .btn{
@@ -625,6 +626,11 @@ input[type="submit"].btn:hover{
 }
 
 @media (max-width: 767px) {
+
+	.container.indent-left{
+		padding-left: 10px;
+	}
+
 	.page-wrap {
 		padding-left: 10px;
 		padding-right: 10px;
@@ -706,6 +712,10 @@ input[type="submit"].btn:hover{
 
 	.moving-text__bot::before{
 		top: -19px;
+	}
+
+	.advant-box-wrap{
+		text-align: center;
 	}
 }
 

@@ -53,16 +53,14 @@
 
 .slider-history-thumb{
 	margin-top: 16px;
+	margin-left: -16px;
 
 	&__item{
 		@include font(normal, 500, 14px, 24px, rgba(51,50,64,0.54));
 		float: left;
 		padding: 0 16px;
 		cursor: pointer;
-	}
-
-	&__item:first-child{
-		padding-left: 0;
+		margin-bottom: 10px;
 	}
 
 	&__item.active,
@@ -148,6 +146,14 @@
 	.cooperation,
 	.advant-box-wrap{
 		margin-top: 60px;
+	}
+
+	.slider-history-thumb{
+		margin-left: -10px;
+	}
+
+	.slider-history-thumb__item{
+		padding: 0 10px;
 	}
 }
 

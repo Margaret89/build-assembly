@@ -91,6 +91,13 @@
 	}
 }
 
+@media (max-width: 991px) {
+	.slider-about-list__play-wrap{
+		padding-top: 0;
+		padding-left: 0;
+	}
+}
+
 @media (max-width: 767px) {
 	.about-company,
 	.about-company__item--slider,
@@ -127,5 +134,11 @@
 		height: 64px;
 		font-size: 18px;
 		line-height: 24px;
+	}
+
+	.slider-about-list__label{
+		margin-top: 0;
+		padding-bottom: 15px;
+		font-size: 10px;
 	}
 }

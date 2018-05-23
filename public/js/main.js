@@ -78,6 +78,7 @@ $(document).ready(function () {
 			nav: false,
 			dots: false,
 			thumbsPrerendered: true,
+			autoHeight:true,
 		});
 	}
 
@@ -167,6 +168,18 @@ $(document).ready(function () {
 	// --------- Мобильное меню ---------
 	if ($('.js-hamburger').length) {
 		var heightTopMenu = $('.js-top-menu').outerHeight() + 2;
+		var countTopMenuItem = $('.js-top-menu-item').length;
+		// var minHeightItemMenu = $('.js-top-menu-link').css('min-height');
+		// minHeightItemMenu = minHeightItemMenu.substr(0,minHeightItemMenu.length - 2);
+		var defaultHeightTopMenu = countTopMenuItem * 46;
+
+		// console.log(heightTopMenu);
+		// console.log(minHeightItemMenu);
+		// console.log(defaultHeightTopMenu);
+
+		if (heightTopMenu < defaultHeightTopMenu) {
+			heightTopMenu = defaultHeightTopMenu;
+		}
 
 		$('.js-hamburger').click(function() {
 			$(this).toggleClass('active');
@@ -193,4 +206,48 @@ $(document).ready(function () {
 			event.stopPropagation();
 		});
 	}
+
+	// Вызов функции подгрузки изображений
+	loadBigImg();
+	loadBigBacground();
+
+	// Вызов функции прижатия футера к низу экрана
+	footerBind('.js-main','.js-header,.js-footer');
+	$(window).on('resize',function(){footerBind('.js-main','.js-header,.js-footer')});
 });
+
+// Загрузка больших изображений
+function loadBigImg() {
+	var $imgDefer = $('[data-src]');
+
+	$imgDefer.each(function(indx, element){
+		var urlImgBig = $(this).attr("data-src");
+		$(this).attr("src", urlImgBig);
+	});
+}
+
+function loadBigBacground() {
+	var $imgDefer = $('[data-background]');
+
+	$imgDefer.each(function(indx, element){
+		var urlBackgroundBig = $(this).attr("data-background");
+		$(this).css("background-image", "url("+ urlBackgroundBig +")");
+	});
+}
+
+// Приижимаем футер к низу экрана
+function footerBind(selectContent,listSelects){
+	var windowHeight = $(window).height();
+	$(listSelects).each(function(){windowHeight-=$(this).outerHeight(true);});
+	if(windowHeight>0){
+		$(selectContent).css({'min-height': windowHeight});
+	};
+
+	var leftMenuHeight = $('.js-left-block').outerHeight(true);
+	var contentHeight = $(selectContent).outerHeight();
+
+	if (contentHeight < leftMenuHeight) {
+		var newContentHeight = leftMenuHeight + parseInt($(selectContent).css("padding-top")) + parseInt($(selectContent).css("padding-bottom"));
+		$(selectContent).css({'min-height': newContentHeight});
+	};
+}
